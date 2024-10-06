@@ -18,8 +18,8 @@
                 echo "<p>ERROR: contraseñas no coinciden</p>";
             }
 
-            if (!ctype_alnum($password_1) || ctype_alpha($password_1) ){
-                echo "<p>ERROR: contraseña no tiene mínimo un núm</p>";
+            if (!preg_match('/[0-9]/', $password_1)) {
+                echo "<p>ERROR: La contraseña debe contener al menos un número</p>";
             }
         }
 
